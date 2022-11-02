@@ -1,0 +1,14 @@
+F:\Dev\C#\ConsoleAppFundamentals\ConsoleFundies\bin\Debug\netcoreapp3.1\ConsoleFundies.exe
+F:\Dev\C#\ConsoleAppFundamentals\ConsoleFundies\bin\Debug\netcoreapp3.1\ConsoleFundies.deps.json
+F:\Dev\C#\ConsoleAppFundamentals\ConsoleFundies\bin\Debug\netcoreapp3.1\ConsoleFundies.runtimeconfig.json
+F:\Dev\C#\ConsoleAppFundamentals\ConsoleFundies\bin\Debug\netcoreapp3.1\ConsoleFundies.runtimeconfig.dev.json
+F:\Dev\C#\ConsoleAppFundamentals\ConsoleFundies\bin\Debug\netcoreapp3.1\ConsoleFundies.dll
+F:\Dev\C#\ConsoleAppFundamentals\ConsoleFundies\bin\Debug\netcoreapp3.1\ConsoleFundies.pdb
+F:\Dev\C#\ConsoleAppFundamentals\ConsoleFundies\obj\Debug\netcoreapp3.1\ConsoleFundies.csproj.AssemblyReference.cache
+F:\Dev\C#\ConsoleAppFundamentals\ConsoleFundies\obj\Debug\netcoreapp3.1\ConsoleFundies.GeneratedMSBuildEditorConfig.editorconfig
+F:\Dev\C#\ConsoleAppFundamentals\ConsoleFundies\obj\Debug\netcoreapp3.1\ConsoleFundies.AssemblyInfoInputs.cache
+F:\Dev\C#\ConsoleAppFundamentals\ConsoleFundies\obj\Debug\netcoreapp3.1\ConsoleFundies.AssemblyInfo.cs
+F:\Dev\C#\ConsoleAppFundamentals\ConsoleFundies\obj\Debug\netcoreapp3.1\ConsoleFundies.csproj.CoreCompileInputs.cache
+F:\Dev\C#\ConsoleAppFundamentals\ConsoleFundies\obj\Debug\netcoreapp3.1\ConsoleFundies.dll
+F:\Dev\C#\ConsoleAppFundamentals\ConsoleFundies\obj\Debug\netcoreapp3.1\ConsoleFundies.pdb
+F:\Dev\C#\ConsoleAppFundamentals\ConsoleFundies\obj\Debug\netcoreapp3.1\ConsoleFundies.genruntimeconfig.cache

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using ConsoleFundies.Abstraction;
+using ConsoleFundies.Random;
 using ConsoleFundies.Compliance;
 using ConsoleFundies.Performance.Sorting;
 using ConsoleFundies.Abstraction.DInjection.DIMethod;
@@ -46,16 +47,53 @@ namespace ConsoleFundies
             //Interface Example
             Console.WriteLine("\n\n---Interface Example---\n\n ");
             Cat myCat = new Cat();
-            myCat.animalSound();
+            myCat.AnimalSound();
 
             Dog myDog = new Dog();
-            myDog.animalSound();
+            myDog.AnimalSound();
+
+            var watch = new System.Diagnostics.Stopwatch();
+
+            watch.Start();
+
+            // Chess Board
+            Console.WriteLine("\n\n---C# Chess Board example---\n\n ");
+            var grid = ChessBoard.CreateGrid(4, 9, 'B', 'W'); // returns string array
+            PrintStringArray(grid);
 
 
-            // Basic Sorting
-            Console.WriteLine("\n\n---C# Basic sorting---\n\n ");
+            // Array.Sort
+            Console.WriteLine("\n\n---C# Array.Sort---\n\n ");
             BasicSorting basicSort = new BasicSorting();
             basicSort.PrintSortedArray();
+
+            watch.Stop();
+
+            Console.WriteLine($"\n Execution Time: {watch.ElapsedMilliseconds} ms");
+
+            // Insertion Sort
+            Console.WriteLine("\n\n---C# Insertion Sort---\n\n ");
+            int[] arr = { 73, 57, 49, 99, 133, 20, 1 };
+            var insertionSort = new InsertionSort();
+            watch.Start();
+            var insertionSortedArray = insertionSort.Sort(arr);
+            watch.Stop();
+            PrintIntArray(insertionSortedArray);
+            Console.WriteLine($"\n Execution Time: {watch.ElapsedMilliseconds} ms");
+
+            // Quick Sort
+            Console.WriteLine("\n\n---C# Quick Sort---\n\n ");
+            var array = new int[] { 73, 57, 49, 99, 133, 20, 1 };
+            var sortFunction = new QuickSort();
+            watch.Start();
+            var quickSortedArray = sortFunction.SortArray(array, 0, array.Length - 1);
+            watch.Stop();
+            PrintIntArray(quickSortedArray);            
+            Console.WriteLine($"\n Execution Time: {watch.ElapsedMilliseconds} ms");
+
+            // IComparable Sorting
+            Console.WriteLine("\n\n---IComparable Sorting---\n\n ");
+            CompareTemperatures.PrintTemperatures(); 
 
             // Constructor Dependency Injection
             Console.WriteLine("\n\n---Constructor Dependency Injection---\n\n ");
@@ -89,6 +127,22 @@ namespace ConsoleFundies
             Console.WriteLine(studRepo.FetchByEmail("NotReal@School.com").StudentId);
             Console.WriteLine(studRepo.FetchByEmail("JoyBlum@School.com").StudentId);
 
+
+            // Liskov Substituion Principle
+            Console.WriteLine("\n\n---Liskov Substituion Principle---\n\n ");
+            Rectangle sqr1 = new Square();
+            sqr1.Height = 6;
+            sqr1.Width = 8;
+
+            Console.WriteLine(AreaCalculator.CalculateArea(sqr1)); //returns 64
+
+            Rectangle sqr2 = new Square();
+            sqr2.Height = 8;
+            sqr2.Width = 6;
+
+            Console.WriteLine(AreaCalculator.CalculateArea(sqr2)); //returns 36
+
+
             // Exception Number Example
             Console.WriteLine("\n\n---Exception Number Example---\n\n ");
             ExceptionHandling exTest = new ExceptionHandling();
@@ -98,9 +152,28 @@ namespace ConsoleFundies
         }
 
         // event handler
-        public static void bl_ProcessCompleted()
+        private static void bl_ProcessCompleted()
         {
             Console.WriteLine("Process Completed!");
+        }
+
+
+        // helper methods
+        private static void PrintIntArray(int[] arr)
+        {
+            int n = arr.Length;
+            for (int i = 0; i < n; ++i)
+                Console.Write(arr[i] + " ");
+
+            Console.Write("\n");
+        }
+        private static void PrintStringArray(string[] arr)
+        {
+            int n = arr.Length;
+            for (int i = 0; i < n; ++i)
+                Console.Write(arr[i] + " ");
+
+            Console.Write("\n");
         }
     }
 }

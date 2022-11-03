@@ -56,8 +56,8 @@ namespace ConsoleFundies.DesignPatterns.SOLID
         public void EditVehicle(Vehicle v)
         {
             //code removed for clarity
-        }
 
+        }
 
         public IList<Vehicle> GetAllVehicles()
         {

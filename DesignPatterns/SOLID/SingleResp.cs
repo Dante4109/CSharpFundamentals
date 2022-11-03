@@ -21,7 +21,7 @@ namespace ConsoleFundies.DesignPatterns.SOLID
 
     public class StudentRepository
     {
-        
+
         // Serves as our DB connection
         public StudentDAL studentDAL = new StudentDAL();
         IList<Student> studentList = new List<Student>();
@@ -37,7 +37,7 @@ namespace ConsoleFundies.DesignPatterns.SOLID
                 var result = from s in studentList
                              where s.StudentId == id
                              select s;
-                
+
                 selectedStudent = result.First();
 
             }
@@ -63,7 +63,7 @@ namespace ConsoleFundies.DesignPatterns.SOLID
 
                 selectedStudent = result.First();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.Write("Error info:" + ex.Message);
                 Console.Write("Re-try with a different email.");
@@ -71,7 +71,7 @@ namespace ConsoleFundies.DesignPatterns.SOLID
 
             return selectedStudent;
         }
-        
+
         public bool Save(Student std)
         {
             Logger.Log("Starting Save()");
@@ -82,7 +82,7 @@ namespace ConsoleFundies.DesignPatterns.SOLID
 
             return true;
         }
-    
+
 
         public bool Delete()
         {
@@ -106,17 +106,18 @@ namespace ConsoleFundies.DesignPatterns.SOLID
             return true;
         }
 
-    public class StudentDAL
-    {
-        public IList<Student> SelectAllStudents()
+        public class StudentDAL
         {
-            IList<Student> studentList = new List<Student>();
-            //Get the Students from the Database
-            //for now we are hard coded the employees
-            studentList.Add(new Student() { StudentId = 1, email = "FrankRush@School.com" });
-            studentList.Add(new Student() { StudentId = 2, email = "JohnSmith@School.com" });
-            studentList.Add(new Student() { StudentId = 3, email = "JoyBlum@School.com" });
-            return studentList;
+            public IList<Student> SelectAllStudents()
+            {
+                IList<Student> studentList = new List<Student>();
+                //Get the Students from the Database
+                //for now we are hard coded the employees
+                studentList.Add(new Student() { StudentId = 1, email = "FrankRush@School.com" });
+                studentList.Add(new Student() { StudentId = 2, email = "JohnSmith@School.com" });
+                studentList.Add(new Student() { StudentId = 3, email = "JoyBlum@School.com" });
+                return studentList;
+            }
         }
     }
 }
